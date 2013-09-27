@@ -1,1 +1,1 @@
-CONFIG_CMDLINE="rootfstype=squashfs,jffs2 noinitrd"
+CONFIG_CMDLINE="rootfstype=squashfs,jffs2 noinitrd fbcon=font:ProFont6x11"

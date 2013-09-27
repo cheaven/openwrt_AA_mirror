@@ -1,0 +1,25 @@
+--- a/drivers/video/Kconfig
++++ b/drivers/video/Kconfig
+@@ -2261,6 +2261,22 @@ config FB_VIRTUAL
+ 
+ 	  If unsure, say N.
+ 
++config ROBOPEAK_FBDEV_RPUSBDISP
++	tristate "RoboPeak USB Display frame buffer support"
++	depends on FB
++	select FB_SYS_FILLRECT
++	select FB_SYS_COPYAREA
++	select FB_SYS_IMAGEBLIT
++	select FB_SYS_FOPS
++	select FB_DEFERRED_IO
++	default n
++	help
++	  This driver implements the front-end of the RoboPeak USB Display
++	  frame buffer driver. 
++
++
++
++
+ config XEN_FBDEV_FRONTEND
+ 	tristate "Xen virtual frame buffer support"
+ 	depends on FB && XEN
